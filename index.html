@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<!--<a href="main.html" class="material-icons w3-hover-yellow">home</a>-->
+<title>The Holy Book of Routes</title>
+<style>
+    .center {margin:100px;}
+</style>
+<head >
+            <!--Google sign in scripts-->
+            <!--<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>-->
+            <!--<script>
+                function onSignIn(googleUser) {
+                // Useful data for your client-side scripts:
+                    var profile = googleUser.getBasicProfile();
+                        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+                        console.log('Full Name: ' + profile.getName());
+                        console.log('Given Name: ' + profile.getGivenName());
+                        console.log('Family Name: ' + profile.getFamilyName());
+                        console.log("Image URL: " + profile.getImageUrl());
+                        console.log("Email: " + profile.getEmail());
+            
+                // The ID token you need to pass to your backend:
+                    var id_token = googleUser.getAuthResponse().id_token;
+                        console.log("ID Token: " + id_token);
+                }
+            </script>  --> 
+    <!--load js scripts from user/do-->
+        <script src="script.js"></script>
+            <!--load w3 css framework-->
+            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+            <!--load google icon styles-->
+            <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+            <link rel="stylesheet" href="style.css">
+            <!--logging in with Google-->
+            <meta name="google-signin-scope" content="profile email">
+            <meta name="google-signin-client_id" content="402311672924-1qnetfk3huioatk9s1sn2g906akvjs38.apps.googleusercontent.com">
+            <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+<!--Comment-->
+    <body ba> 
+        
+
+        <div style="background-color: maroon;">
+            <h1 class="w3-margin-left" style="color: yellow"; id="head1">
+                <a href="main.html">
+                    <b>
+                        The Holy Book of Routes
+                    </b>
+                </a>
+            </h1>
+            <div class="w3-bar w3-khaki">
+                <!--<h5 class="w3-margin-left"><b>Resources</b></h5>-->
+                    <a href="about.html" class="w3-hover-yellow w3-bar-item w3-button"> About HBR</a>
+                    <!--<a href="https://www.arcgis.com/index.html" class="w3-hover-red w3-bar-item w3-button">ArcGis Online</a>-->
+                    <a href="links.html" class="w3-hover-yellow w3-bar-item w3-button"><Calvin class="edu">Useful Links</a>
+                    <a href="form.html" class="w3-hover-yellow w3-bar-item w3-button">Submit a route</a>
+                    <a href="support.html" class="w3-hover-yellow w3-bar-item w3-button">Support</a>
+                    <!--<a href="https://www.google.com/maps/d/u/0/viewer?mid=1BRpNAtmPETvsxMBEnbSDEmYetzzacmEt&ll=43.036758449663566%2C-85.61418427935186&z=11" class = "w3-hover-red w3-bar-item w3-button">Marathon Route</a>-->
+            </div><br>
+        <!--<form  class="w3-center" id="routeForm">-->
+        <div class="w3-center" style="background-color:khaki;">
+            <h3>Today's Route</h3>
+            <select id="selectRoute">
+                <option>Select Route</option>
+            </select>
+        </div>
+        <!--</form>-->
+        <br>
+            </div>
+            <script>
+                var select  = document.getElementById("selectRoute");
+                var routes = [
+                    "Money",
+                    "Aquinas",
+                    "The Hubb",
+                    "The Richard Turner",
+                    "Wacky Way Wednesday",
+                    "Ada Trails",
+                    "HPRL",
+                    "92nd Street Hills",
+                    "Egypt Valley",
+                    "Course Workout"
+                ];
+                for (let i = 0; i < routes.length; i++) {
+                    var opt = routes[i];
+                    select.innerHTML += "<option value=\"" + opt + "\">" + opt + "</option>";
+
+                    /*let opt = routes[i];
+                    let el = document.createElementById("option");
+                    el.textContent = opt;
+                    el.value = opt;
+                    select.appendChild(el);*/
+                }
+            </script>
+        <div>
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1hOJM1ei5186Othy57JS1xz2A8kA3NgAR" width="95%" height="600"></iframe>
+        </div>          
+    </body>
+</html>

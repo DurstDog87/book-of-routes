@@ -1,0 +1,23 @@
+
+/* body styling */
+
+body { 
+    background-color: moccasin;
+    /*border*/
+    outline: maroon;
+    outline-width: 10px;
+    }
+
+
+/*classes*/
+
+/*page title header*/
+
+class ::backdrop.bod {
+    background-color: maroon;
+    text-align: left;
+}
+
+class .center {
+    align-self: 50%;
+}
